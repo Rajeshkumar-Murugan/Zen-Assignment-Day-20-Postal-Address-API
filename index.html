@@ -22,25 +22,28 @@
     <div class="container">
     <div class="row">
         <div class="col textbox">
-            <h4>Search by Postal PIN</h4> 
-            <form action="#">  
+            <h5>Search by Postal PIN</h5> 
+        <form target="_self" onsubmit="event.preventDefault(); display('pin');">    
         <div class="form-floating sm-3 ">
-            <input type="number" class="form-control pin" id="pincode" placeholder="Enter Pin"  maxlength="6" onfocus=this.value=''>
+            
+            <input type="number" class="form-control pin" id="pincode" placeholder="Enter Pin"  maxlength="6">
             <label for="pincode">Enter Pincode</label>
             <div class="d-grid gap-2">
-            <button onclick="display('pin')" class="btn btn-primary" type="button">Search by Pin</button>
+            <button  class="btn btn-primary btn-lg" type="submit">Search by Pin</button>
             </div>
-            </form>
+        </form>
         </div>
         </div>
         <div class="col textbox" >
-            <h4>Search by Branch Name</h4> 
+            <h5>Search by Branch Name</h5> 
+            <form target="_self" onsubmit="event.preventDefault(); display('name');"> 
             <div class="form-floating sm-3 ">
-                <input type="text" class="form-control state" id="branch" placeholder="Enter Branch" onfocus=this.value=''>
+                <input type="text" class="form-control state" id="branch" placeholder="Enter Branch">
                 <label for="branch">Enter Branch</label>
                 <div class="d-grid gap-2">
-                <button onclick="display('name')" class="btn btn-primary" type="button">Search by Branch</button>
+                <button class="btn btn-primary btn-lg" type="submit">Search by Branch</button>
             </div>
+        </form>
             </div>
         </div>
     </div>
